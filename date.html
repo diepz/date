@@ -2,22 +2,29 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Bài xây dựng lớp date</title>
+	<title>Date</title>
+	<script type="text/javascript">
+		var enter = "<br>";
+		this.myDate = function(value1,value2,value3) 
+		{
+			this.day = value1;
+			this.month = value2;
+			this.year = value3;
+			this.setDay = setDay;
+			function setDay(val) {
+				this.day = val;
+			}
+
+		}
+		var myObj = new myDate(2,2,2007);
+		console.log(myObj);
+		document.write(myObj.day + "/" + myObj.month + "/" + myObj.year + enter);
+		myObj.setDay(10);
+		document.write(myObj.day + "/" + myObj.month + "/" + myObj.year + enter);
+
+	</script>
 </head>
 <body>
-<script type="text/javascript">
-	var enter = "<br>";
-	this.myDate = myDate;
-	function myDate() {
-		this.day = 2;
-		this.month = 2;
-		this.year = 2007;
-	}
 
-	var getday = new myDate;
-	document.write(getday.day + "/");
-	document.write(getday.month + "/");
-	document.write(getday.year);
-</script>
 </body>
 </html>
